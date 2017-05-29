@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Plugin format number for jQuery</title>
+
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h1>Plugin format number for jQuery</h1>
+
+		<input class="form-control pcs-format-number" type="text" placeholder="Insert your value (Ex: 150300)">
+    </div>
+
+	<!-- jQuery -->
+	<script src="vendor/jquery-1.12.4.min.js"></script>
+
+	<!-- Plugin copy elements for jQuery -->
+	<script src="js/pcsFormatNumber.jquery.js"></script> <!-- INCLUDE IN YOUR PROJECT -->
+
+	<!-- INCLUDE IN YOUR PROJECT -->
+	<script>
+		$(document).ready(function() {
+			$('.pcs-format-number').pcsFormatNumber({	// Set selector for input element (ID or Class)
+	            decimal_separator: ".",					// Set copy element
+	            number_separator: ",",					// Set button for copy element
+				to_fixed: 2,							// Set fixed of decimal
+				currency: "€"							// Set currency (€, $, £...)
+			});
+		});
+	</script>
+</body>
+</html>
